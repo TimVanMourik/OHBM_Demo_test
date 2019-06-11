@@ -1,0 +1,309 @@
+{
+  "links": [
+    {
+      "from": "18eeb80d-443d-4a11-a927-0a87292923bc",
+      "to": "1c4b7c4b-4074-430a-aea7-04a7c44ca04e"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "freesurfer_SegmentWM",
+      "class": "freesurfer.SegmentWM",
+      "category": [
+        "freesurfer",
+        "preprocess"
+      ],
+      "ports": [
+        {
+          "base": "in_file",
+          "editable": true,
+          "id": "abc1b785-4cd1-475e-a71a-7ef6792f2bce",
+          "input": true,
+          "inputPort": "d4801a35-ad9e-4d2c-898a-58437a6a2fe9",
+          "name": "in_file",
+          "output": false,
+          "outputPort": false,
+          "value": "'brain.nii'",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "out_file",
+          "editable": true,
+          "id": "d50bfed9-8c6a-4f9f-8145-eb6d19d3f82b",
+          "input": true,
+          "inputPort": "ca9c9b5b-e06f-43f2-ba43-eaa2fcedeec3",
+          "name": "out_file",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "subjects_dir",
+          "editable": true,
+          "id": "08b50d42-6960-4c51-80af-52b9e7410526",
+          "input": true,
+          "inputPort": "474d6f30-0907-4794-ae79-844b00706f2c",
+          "name": "subjects_dir",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "args",
+          "editable": true,
+          "id": "246107c6-f808-41e2-802d-2f006e12b304",
+          "input": true,
+          "inputPort": "3c510ffa-bbfb-4aad-ae13-3b372f7c149e",
+          "name": "args",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "environ",
+          "editable": true,
+          "id": "e75baa20-e3a2-4f7c-bb0f-63692ccc73e9",
+          "input": true,
+          "inputPort": "87e86f34-d838-4f11-b9bf-acc1d73e993c",
+          "name": "environ",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "out_file",
+          "editable": false,
+          "id": "fcef76e2-dc4e-490b-8fa1-760d1b250103",
+          "input": false,
+          "inputPort": false,
+          "name": "out_file",
+          "output": true,
+          "outputPort": "18eeb80d-443d-4a11-a927-0a87292923bc",
+          "value": "",
+          "visible": true,
+          "iterator": false
+        }
+      ],
+      "position": [
+        98.5468864440918,
+        158.9938507080078
+      ],
+      "code": [
+        {
+          "language": "Nipype",
+          "comment": "Wraps the executable command ``mri_segment``.",
+          "argument": {
+            "name": "freesurfer.SegmentWM()",
+            "import": "import nipype.interfaces.freesurfer as freesurfer"
+          }
+        },
+        {
+          "language": "Docker",
+          "argument": {
+            "name": "freesurfer"
+          }
+        }
+      ],
+      "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#segmentwm",
+      "colour": "#fa5f25"
+    },
+    {
+      "name": "freesurfer_Smooth",
+      "class": "freesurfer.Smooth",
+      "category": [
+        "freesurfer",
+        "preprocess"
+      ],
+      "ports": [
+        {
+          "base": "in_file",
+          "editable": true,
+          "id": "60b5a987-5633-4ebd-af4d-39c351681723",
+          "input": true,
+          "inputPort": "1c4b7c4b-4074-430a-aea7-04a7c44ca04e",
+          "name": "in_file",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "reg_file",
+          "editable": true,
+          "id": "af3e764a-8510-4de2-a9c0-7f198e94ce40",
+          "input": true,
+          "inputPort": "93bab789-6aa0-4c84-8bf1-ebc4114cc57b",
+          "name": "reg_file",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "surface_fwhm",
+          "editable": true,
+          "id": "45fafc74-8b60-4a8c-b574-ba7a694af849",
+          "input": true,
+          "inputPort": "c752fc49-a0bb-4948-9dfb-7d8ceeb9ce65",
+          "name": "surface_fwhm",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "num_iters",
+          "editable": true,
+          "id": "8a512405-0118-4b77-b8ca-227154774171",
+          "input": true,
+          "inputPort": "e5200515-ffa6-48be-ac6b-4e88ce1f6502",
+          "name": "num_iters",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "smoothed_file",
+          "editable": true,
+          "id": "dbbceb00-9561-4633-bf1e-71b02707568c",
+          "input": true,
+          "inputPort": "dd44791a-4e0f-4f02-8a86-92d325ba9bc8",
+          "name": "smoothed_file",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "proj_frac_avg",
+          "editable": true,
+          "id": "e7cd8155-99b7-4c37-8b6d-d37264c5799c",
+          "input": true,
+          "inputPort": "883f6eb1-4eb1-47af-a7f9-6d084ec7b9a9",
+          "name": "proj_frac_avg",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "proj_frac",
+          "editable": true,
+          "id": "e94608aa-1583-42be-bddf-cd4a47d1b7be",
+          "input": true,
+          "inputPort": "c529df54-e8db-48fe-a56c-6ce643ecd0ac",
+          "name": "proj_frac",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "vol_fwhm",
+          "editable": true,
+          "id": "91dca408-8015-4be0-ab94-6fded19e2ee5",
+          "input": true,
+          "inputPort": "02f4e91d-417f-4710-838d-6b1911bd1277",
+          "name": "vol_fwhm",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "subjects_dir",
+          "editable": true,
+          "id": "e433a899-349e-4213-b8cf-8350960658a9",
+          "input": true,
+          "inputPort": "777543d1-1d40-4cc3-ae66-bb3769dd3247",
+          "name": "subjects_dir",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "args",
+          "editable": true,
+          "id": "5e0aa75a-3834-4d83-8a27-212669ff7a58",
+          "input": true,
+          "inputPort": "1298b032-fa0f-4062-bdbf-a7381835c256",
+          "name": "args",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "environ",
+          "editable": true,
+          "id": "010d66d4-e115-4a9d-82d4-a38d99b8870e",
+          "input": true,
+          "inputPort": "f7a18066-e538-4727-8536-e2295875479c",
+          "name": "environ",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "smoothed_file",
+          "editable": false,
+          "id": "356c64c0-257f-4b5c-ab79-e812d683f879",
+          "input": false,
+          "inputPort": false,
+          "name": "smoothed_file",
+          "output": true,
+          "outputPort": "aacedc08-e8ce-4637-a382-c13ce9817d49",
+          "value": "",
+          "visible": true,
+          "iterator": false
+        }
+      ],
+      "position": [
+        457.4669237538499,
+        264.8641302680324
+      ],
+      "code": [
+        {
+          "language": "Nipype",
+          "comment": "Wraps the executable command ``mris_volsmooth``.",
+          "argument": {
+            "name": "freesurfer.Smooth()",
+            "import": "import nipype.interfaces.freesurfer as freesurfer"
+          }
+        },
+        {
+          "language": "Docker",
+          "argument": {
+            "name": "freesurfer"
+          }
+        }
+      ],
+      "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#smooth",
+      "colour": "#fa5f25"
+    }
+  ],
+  "version": "v1"
+}
